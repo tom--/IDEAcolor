@@ -1,0 +1,24 @@
+IDEAcolor
+=========
+
+This script takes color definitions from a ColorScheme Designer scheme XML file and modifies
+a JetBrains IDEA color scheme definition XML file using the CSD colors.
+
+To get results you'll have to play in [ColorScheme Designer 3](http://colorschemedesigner.com/),
+export the scheme as an XML file and download it to some convenient directory. Then you can run
+the script on that plus the basis IDEA colors XML file you want to modify:
+
+Usage
+-----
+
+	idecolor.php csd_export_file ide_color_file
+	  csd_export_file — XML scheme export from http://colorschemedesigner.com
+	  ide_color_file — JetBrains IDE color file
+	On success, ide_color_file is renamed with numeric suffix and new file is
+	written in its place.
+
+But seriously
+-----
+
+To get a result you'll really be satisfied with you'll have to modify the color mapping in then
+script itself. The variable to change is `$map`. You should find it pretty much self-documenting.
